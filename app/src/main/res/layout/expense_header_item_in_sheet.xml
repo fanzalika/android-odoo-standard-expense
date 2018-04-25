@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/default_16dp"
+    android:paddingRight="@dimen/default_16dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:background="@drawable/expense_line_ids_bg"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/date"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:textSize="16sp"
+        android:text="Date"
+        android:textAllCaps="true"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:id="@+id/expense_name"
+        android:text="Expense Name"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/attachment_number"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:textSize="16sp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tax_ids"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:text="Tax"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/total_amount"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:textSize="16sp"
+        android:text="Total Amount"
+        android:textAllCaps="true"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

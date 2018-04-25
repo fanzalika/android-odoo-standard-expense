@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!--State Layout-->
+    <LinearLayout
+        android:id="@+id/expense_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="@dimen/default_8dp"
+        android:scrollbars="horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/expense_action_btn"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Submit to manager"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <View
+            android:minWidth="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/expense_state_text"
+            android:gravity="center"
+            android:background="@color/base_chatter_view_note_background"
+            android:paddingLeft="@dimen/default_16dp"
+            android:paddingRight="@dimen/default_16dp"
+            android:text="To Submit"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/expense_attachments_layout"
+        android:gravity="end"
+        android:background="@color/base_chatter_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/btnAddAttachment"
+            android:padding="@dimen/default_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_add_a_photo_black_24dp"/>
+        <TextView
+            android:id="@+id/btnSendAttachment"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:drawableEnd="@drawable/ic_send_black_24dp"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:text="0"
+            android:padding="@dimen/default_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"/>
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/expense_attachments"
+            android:padding="@dimen/default_8dp"
+            android:drawableLeft="@drawable/ic_attachment_color_black"
+            android:drawableStart="@drawable/ic_attachment_color_black"
+            android:text="0 Documents"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--View Layout-->
+    <LinearLayout
+        android:id="@+id/expense_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <odoo.controls.OForm
+            android:id="@+id/expenseForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:modelName="hr.expense">
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldLabelColor="@color/theme_secondary"
+                app:fieldName="name"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="product_id"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="unit_amount"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="quantity"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+            <LinearLayout
+                android:id="@+id/taxes_view_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <View
+                style="@style/ViewSeparator"
+                android:layout_marginLeft="72dp" />
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="reference"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="date"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="employee_id"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="currency_id"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <View
+                style="@style/ViewSeparator"
+                android:layout_marginLeft="72dp" />
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="total_amount"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="total_amount"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldName="payment_mode"
+                app:fieldType="Selection"
+                app:fieldTextAppearance="?android:textAppearanceMedium"
+                app:iconResource="@drawable/ic_action_notes_content"/>
+
+            <odoo.controls.OField
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:fieldType="Text"
+                app:fieldName="description"
+                app:showIcon="false"
+                app:showLabel="false">
+
+            </odoo.controls.OField>
+        </odoo.controls.OForm>
+    </LinearLayout>
+    <!--Edit Layout-->
+    <LinearLayout
+        android:id="@+id/expense_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/statusBarHeight"
+        android:visibility="gone">
+
+        <odoo.controls.OForm
+            android:id="@+id/expenseFormEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            app:modelName="hr.expense">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <odoo.controls.OField
+                    android:id="@+id/mForm_edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="name"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:id="@+id/product_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="product_id"
+                    app:widgetType="SearchableLive"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="product_uom_id"
+                    app:widgetType="SearchableLive"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:id="@+id/unit_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="unit_amount"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:id="@+id/quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="quantity"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+                <LinearLayout
+                    android:id="@+id/taxes_edit_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/taxes_linear_layout"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/ViewSeparator"
+                    android:layout_marginLeft="72dp" />
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="reference"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="date"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="account_id"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:widgetType="SearchableLive"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:id="@+id/employee_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="employee_id"
+                    app:widgetType="SearchableLive"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:id="@+id/currency_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="currency_id"
+                    app:widgetType="SearchableLive"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <View
+                    style="@style/ViewSeparator"
+                    android:layout_marginLeft="72dp" />
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="payment_mode"
+                    app:fieldType="Selection"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldName="total_amount"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+                <odoo.controls.OField
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fieldType="Text"
+                    app:fieldName="description"
+                    app:fieldTextAppearance="?android:textAppearanceMedium"
+                    app:iconResource="@drawable/ic_action_notes_content"/>
+            </LinearLayout>
+        </odoo.controls.OForm>
+
+    </LinearLayout>
+</LinearLayout>
+
+<!--todo-->
+<!--
+Add Account Field;
+-->

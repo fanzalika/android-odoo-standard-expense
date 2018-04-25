@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/taxes_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="24dp" />
+
+    <LinearLayout
+        android:id="@+id/control_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:text="Taxes"
+            android:textColor="#444444"
+            android:textAllCaps="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp">
+            <ImageButton
+                android:id="@+id/add_img_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="36dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add_white_24dp"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/taxes_edit_recycler"
+                android:layout_toLeftOf="@id/add_img_button"
+                android:layout_toStartOf="@id/add_img_button"
+                android:layout_centerVertical="true"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

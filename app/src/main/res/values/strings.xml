@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Odoo</string>
+    <string name="sync_label_customers">Customers</string>
+    <string name="sync_label_expenses">Expenses</string>
+    <string name="sync_label_expenses_sheet">Expenses Sheet</string>
+    <string name="sync_label_employee">Employee</string>
+    <string name="sync_label_resource">Resource</string>
+    <string name="sync_label_product">Product</string>
+    <string name="sync_label_product_uom">Product Uom</string>
+    <string name="sync_label_account_account">Account Account</string>
+    <string name="sync_label_account_move">Account Move</string>
+    <string name="sync_label_account_tax">Account Tax</string>
+    <string name="sync_label_ir_attachment">Ir Attachment</string>
+    <string name="toast_information_saved">Information Saved</string>
+    <string name="toast_image_size_too_large">Image size too large !</string>
+    <string name="label_no_customer_found">No Customer Found !</string>
+    <string name="message_to">Message to %s</string>
+    <string name="add_internal_note">Add and internal note</string>
+    <string name="internal_note_hint">Add an internal note that will not be sent to the followers</string>
+    <string name="label_log_note">Log note</string>
+    <string name="label_send_message"><u>Send a message</u></string>
+    <string name="label_log_an_internal_note"><u>Log an internal note</u></string>
+    <string name="label_version_build">Build</string>
+    <string name="toast_permission_download_storage">Storage permission required to create downloaded file on your sdcard.</string>
+    <string name="toast_permission_download_storage_help">Storage permission required to store downloaded files on sdcard of your phone. Please grant permission for use this feature</string>
+    <string name="confirm_are_you_sure_want_to_delete">Are you sure want to delete ?</string>
+    <string name="toast_record_deleted">Record deleted</string>
+
+    <!--Expense-->
+
+    <string name="label_no_sheets_found">No Sheets Found !</string>
+    <string name="label_no_expense_found">No Expense Found !</string>
+    <string name="attachments_label">%d Documents</string>
+    <string name="submit_message_not_in_network">
+        You are not connected to Internet.
+        It may need time to update record on server.
+        Submit expense to manager ?</string>
+
+    <!--Content Description-->
+    <string name="attachment_icon_desc">Expense has Attachment</string>
+</resources>
