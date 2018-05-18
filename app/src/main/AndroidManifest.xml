@@ -300,6 +300,9 @@
         </service>
 
         <activity android:name=".addons.expense.ExpenseSheetActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="204c2708b86e66fdbdbc1221ba88a65399d102f4" />
     </application>
 
 </manifest>

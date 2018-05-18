@@ -25,12 +25,14 @@ import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.crashlytics.android.Crashlytics;
 import com.odoo.core.orm.ModelRegistryUtils;
 import com.odoo.core.orm.OModel;
 import com.odoo.core.orm.OSQLite;
 import com.odoo.core.rpc.Odoo;
 import com.odoo.core.support.OUser;
 
+import io.fabric.sdk.android.Fabric;
 import java.lang.reflect.Constructor;
 import java.util.HashMap;
 
@@ -45,6 +47,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         App.APPLICATION_NAME = getPackageManager().getApplicationLabel(getApplicationInfo()).toString();
         App.modelRegistryUtils.makeReady(getApplicationContext());
     }
