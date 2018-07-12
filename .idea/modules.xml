@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/intro-slider-lib/intro-slider-lib.iml" filepath="$PROJECT_DIR$/intro-slider-lib/intro-slider-lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/open_odoo_expense.iml" filepath="$PROJECT_DIR$/open_odoo_expense.iml" />
+      <module fileurl="file://$PROJECT_DIR$/odoo-expense-11.iml" filepath="$PROJECT_DIR$/odoo-expense-11.iml" />
     </modules>
   </component>
 </project>
